@@ -12,7 +12,12 @@ export function IndexView() {
       marginX="auto"
     >
       <Grid columnGap={16} templateColumns={{ base: "1fr", lg: "1fr 1fr" }}>
-        <Image src="/ania_pose_1.jpeg" width="500px" height="500px" />
+        <Image
+          src="/1e9fa1f6-faf7-4b87-a4c8-df46a6497313.jpg"
+          width="500px"
+          height="500px"
+          objectFit="cover"
+        />
 
         <Flex
           paddingRight={8}
@@ -42,7 +47,7 @@ export function IndexView() {
       </Grid>
       <Box
         position="absolute"
-        borderColor="beige.700"
+        borderColor="teal.700"
         display={{ base: "none", lg: "block" }}
         borderWidth="1px"
         borderStyle="solid"
