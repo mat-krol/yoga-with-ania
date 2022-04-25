@@ -1,7 +1,12 @@
 import { Button, IconButton, useBreakpointValue } from "@chakra-ui/react";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
-import { linkToIndex } from "../common/links";
+import {
+  linkToAbout,
+  linkToContact,
+  linkToIndex,
+  linkToPractiseWithMe,
+} from "../common/links";
 
 import { Header } from "./Header";
 
@@ -9,11 +14,11 @@ export function HeaderWithNavigation() {
   const showOnMobile = useBreakpointValue({ base: true, md: false });
 
   const links = [
-    { title: "Schedule", link: linkToIndex() },
-    { title: "About Me", link: linkToIndex() },
+    { title: "Practise with me", link: linkToPractiseWithMe() },
+    { title: "About", link: linkToAbout() },
     {
       title: "Contact",
-      link: linkToIndex(),
+      link: linkToContact(),
     },
     { icon: FaInstagram, link: linkToIndex() },
   ];
@@ -26,14 +31,14 @@ export function HeaderWithNavigation() {
             <Link href={link} key={title}>
               {Icon ? (
                 <IconButton
-                  color="beige.800"
+                  color="teal.800"
                   aria-label="Instagram"
                   variant="link"
                   justifyContent="end"
                   icon={<Icon />}
                 />
               ) : (
-                <Button colorScheme="beige" fontWeight="normal" variant="link">
+                <Button colorScheme="teal" fontWeight="normal" variant="link">
                   {title}
                 </Button>
               )}
