@@ -1,4 +1,4 @@
-import { Flex, Grid, Heading, Stack } from "@chakra-ui/react";
+import { Grid, Heading, Stack } from "@chakra-ui/react";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
 import { linkToIndex } from "../common/links";
@@ -15,22 +15,13 @@ export function Header({ children }: PropsWithChildren<{}>) {
     >
       <Stack direction="row">
         <Link href={linkToIndex()}>
-          <Heading
-            as="h1"
-            size="2xl"
-            fontWeight="normal"
-            fontFamily="Antic Didone"
-            lineHeight="0.95"
-            letterSpacing="-2px"
-          >
+          <Heading as="h1" size="2xl">
             Yoga with Ania
           </Heading>
         </Link>
       </Stack>
 
-      <Flex alignItems="center" justifyContent="space-between">
-        {children}
-      </Flex>
+      {children}
     </Grid>
   );
 }
