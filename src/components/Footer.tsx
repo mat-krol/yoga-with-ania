@@ -1,7 +1,7 @@
-import { Box, Stack } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import { Logo } from "./Logo";
 
-export default function Footer() {
+export function Footer() {
   return (
     <Stack
       direction="row"
