@@ -4,7 +4,7 @@ import { ContactView } from "../src/views/ContactView";
 
 export default function ContactPage() {
   return (
-    <Layout>
+    <Layout title="Contact">
       {{
         header: <HeaderWithNavigation />,
         body: <ContactView />,

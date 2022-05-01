@@ -5,7 +5,7 @@ import { AboutView } from "../src/views/AboutView";
 
 export default function AboutPage() {
   return (
-    <Layout>
+    <Layout title="About">
       {{
         header: <HeaderWithNavigation />,
         body: <AboutView />,
