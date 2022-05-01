@@ -54,13 +54,27 @@ const LinkList = () => (
             variant="link"
             justifyContent="end"
             icon={<Icon />}
+            position="relative"
             paddingY={{ base: 2, md: "unset" }}
+            _hover={{
+              _before: {
+                width: "16px",
+                background: "teal.800",
+                height: "1.5px",
+                content: '""',
+                display: "block",
+                position: "absolute",
+                bottom: "-1px",
+                right: "0",
+              },
+            }}
           />
         ) : (
           <Button
             colorScheme="teal"
             fontWeight="normal"
             variant="link"
+            textAlign="right"
             paddingY={{ base: 2, md: "unset" }}
           >
             {title}
