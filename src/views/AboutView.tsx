@@ -1,13 +1,13 @@
 import { Box, Grid, Heading, Stack, Text } from "@chakra-ui/react";
 
-import aboutImage from "../../public/b965ad6f-80d5-47b4-b8f3-0b3b270f8f12.jpg";
 import vinyasaImage from "../../public/1e786a31-d84f-4a9d-8018-ba8d783c2aca.jpg";
-import skillsImage from "../../public/ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg";
-import meditationImage from "../../public/c417a8c5-007d-410a-8ed1-04f6b2b4e898.jpg";
 import pranayamaImage from "../../public/53dfeb3e-db1e-469f-b4ad-bab54ac5e7c9.jpg";
+import aboutImage from "../../public/b965ad6f-80d5-47b4-b8f3-0b3b270f8f12.jpg";
+import meditationImage from "../../public/c417a8c5-007d-410a-8ed1-04f6b2b4e898.jpg";
+import skillsImage from "../../public/ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg";
 
-import { TextImageCard } from "../components/TextImageCard";
 import { LazyImage } from "../components/LazyImage";
+import { TextImageCard } from "../components/TextImageCard";
 
 export function AboutView() {
   return (
@@ -94,15 +94,25 @@ export function AboutView() {
           columnGap="16px"
           rowGap={4}
         >
-          <TextImageCard src={vinyasaImage} text="Vinyasa & Mandala" />
+          <TextImageCard
+            src={vinyasaImage}
+            text="Vinyasa & Mandala"
+            alt="A photo of Ania practising yoga"
+          />
           <TextImageCard
             src={skillsImage}
             text="Skills (e.g. arm balances, inversions)"
+            alt="A close up of Ania's arms and legs while she's doing the pigeon pose"
           />
-          <TextImageCard src={meditationImage} text="Yin Yoga & Meditation" />
+          <TextImageCard
+            src={meditationImage}
+            text="Yin Yoga & Meditation"
+            alt="A photo of Ania practising yoga"
+          />
           <TextImageCard
             src={pranayamaImage}
             text="Pranayama and the science of breath"
+            alt="A close up of Ania while she's practising breathing in savasana"
           />
         </Grid>
       </Stack>

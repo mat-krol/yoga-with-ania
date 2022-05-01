@@ -1,13 +1,16 @@
-import { Box, Stack, Button, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Text } from "@chakra-ui/react";
+import { StaticImageData } from "next/image";
+
+import { LazyImage } from "./LazyImage";
 
 type Props = {
-  src: any;
+  src: StaticImageData | string;
   text: string;
+  alt: string;
   isHoverable?: boolean;
 };
 
-export function TextImageCard({ src, text, isHoverable }: Props) {
+export function TextImageCard({ src, text, alt, isHoverable }: Props) {
   return (
     <Box
       position="relative"
@@ -37,7 +40,7 @@ export function TextImageCard({ src, text, isHoverable }: Props) {
       })}
     >
       <Box>
-        <Image src={src} width="500px" height="500px" objectFit="cover" />
+        <LazyImage src={src} alt={alt} />
       </Box>
 
       <Text textDecoration={isHoverable ? "underline" : ""}>{text}</Text>
