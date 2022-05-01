@@ -7,6 +7,8 @@ import skillsImage from "../../public/ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg";
 import meditationImage from "../../public/c417a8c5-007d-410a-8ed1-04f6b2b4e898.jpg";
 import pranayamaImage from "../../public/53dfeb3e-db1e-469f-b4ad-bab54ac5e7c9.jpg";
 
+import { TextImageCard } from "../components/TextImageCard";
+
 export function AboutView() {
   return (
     <>
@@ -95,13 +97,13 @@ export function AboutView() {
           columnGap="16px"
           rowGap={4}
         >
-          <Card src={vinyasaImage} text="Vinyasa & Mandala" />
-          <Card
+          <TextImageCard src={vinyasaImage} text="Vinyasa & Mandala" />
+          <TextImageCard
             src={skillsImage}
             text="Skills (e.g. arm balances, inversions)"
           />
-          <Card src={meditationImage} text="Yin Yoga & Meditation" />
-          <Card
+          <TextImageCard src={meditationImage} text="Yin Yoga & Meditation" />
+          <TextImageCard
             src={pranayamaImage}
             text="Pranayama and the science of breath"
           />
@@ -110,16 +112,3 @@ export function AboutView() {
     </>
   );
 }
-
-const Card = ({ src, text }: any) => (
-  <Box>
-    <Image
-      src={src}
-      width="500px"
-      height="500px"
-      objectFit="cover"
-      placeholder="blur"
-    />
-    <Text>{text}</Text>
-  </Box>
-);
