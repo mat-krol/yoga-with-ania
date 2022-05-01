@@ -18,8 +18,10 @@ export function TextImageCard({ src, text, alt, isHoverable }: Props) {
         cursor: "pointer",
         _before: {
           width: "100%",
-          paddingTop: "100%",
-          background: "teal.800",
+          paddingTop: "calc(100% - 2px)",
+          borderColor: "teal.700",
+          borderWidth: "1px",
+          borderStyle: "solid",
           content: '""',
           display: "block",
           position: "absolute",
@@ -34,7 +36,7 @@ export function TextImageCard({ src, text, alt, isHoverable }: Props) {
             top: "-8px",
             left: "-8px",
             width: "calc(100% + 8px + 8px)",
-            paddingTop: "calc(100% + 8px + 8px)",
+            paddingTop: "calc(100% - 2px + 8px + 8px)",
           },
         },
       })}
