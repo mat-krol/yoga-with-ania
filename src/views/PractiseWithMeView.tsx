@@ -1,4 +1,4 @@
-import { Grid, Stack } from "@chakra-ui/react";
+import { Grid, Heading, Stack } from "@chakra-ui/react";
 import {
   linkToCurrentSchedule,
   linkToPrivatesAndCorporate,
@@ -9,12 +9,14 @@ export function PractiseWithMeView() {
   return (
     <Stack
       paddingX={{ base: 4, lg: 0 }}
-      paddingY={{ base: 0, lg: 16 }}
-      marginY={8}
+      marginY={{ base: 8, lg: 12 }}
       maxW="960px"
       marginX="auto"
       spacing={{ base: 4, lg: 8 }}
     >
+      <Heading as="h1" size="4xl">
+        Practise with me
+      </Heading>
       <Grid
         templateColumns={{ base: "1fr 1fr", lg: "1fr 1fr 1fr 1fr" }}
         columnGap="16px"
