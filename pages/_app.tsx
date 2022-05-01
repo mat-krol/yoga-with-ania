@@ -1,10 +1,10 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import type { AppProps } from "next/app";
-
-import "typeface-roboto";
 import "typeface-antic-didone";
-import "../src/common/globals.css";
+import "typeface-roboto";
+
 import { theme } from "../src/common/theme";
+
+import type { AppProps } from "next/app";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
