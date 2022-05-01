@@ -1,6 +1,12 @@
 import { Box, Grid, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
+import aboutImage from "../../public/b965ad6f-80d5-47b4-b8f3-0b3b270f8f12.jpg";
+import vinyasaImage from "../../public/1e786a31-d84f-4a9d-8018-ba8d783c2aca.jpg";
+import skillsImage from "../../public/ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg";
+import meditationImage from "../../public/c417a8c5-007d-410a-8ed1-04f6b2b4e898.jpg";
+import pranayamaImage from "../../public/53dfeb3e-db1e-469f-b4ad-bab54ac5e7c9.jpg";
+
 export function AboutView() {
   return (
     <>
@@ -14,10 +20,11 @@ export function AboutView() {
       >
         <Grid columnGap={16} templateColumns={{ base: "1fr", lg: "1fr 1fr" }}>
           <Image
-            src="/b965ad6f-80d5-47b4-b8f3-0b3b270f8f12.jpg"
+            src={aboutImage}
             width="500px"
             height="500px"
             objectFit="cover"
+            placeholder="blur"
           />
 
           <Stack
@@ -88,20 +95,14 @@ export function AboutView() {
           columnGap="16px"
           rowGap={4}
         >
+          <Card src={vinyasaImage} text="Vinyasa & Mandala" />
           <Card
-            src="/1e786a31-d84f-4a9d-8018-ba8d783c2aca.jpg"
-            text="Vinyasa & Mandala"
-          />
-          <Card
-            src="/ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg"
+            src={skillsImage}
             text="Skills (e.g. arm balances, inversions)"
           />
+          <Card src={meditationImage} text="Yin Yoga & Meditation" />
           <Card
-            src="/c417a8c5-007d-410a-8ed1-04f6b2b4e898.jpg"
-            text="Yin Yoga & Meditation"
-          />
-          <Card
-            src="/53dfeb3e-db1e-469f-b4ad-bab54ac5e7c9.jpg"
+            src={pranayamaImage}
             text="Pranayama and the science of breath"
           />
         </Grid>
@@ -112,7 +113,13 @@ export function AboutView() {
 
 const Card = ({ src, text }: any) => (
   <Box>
-    <Image src={src} width="500px" height="500px" objectFit="cover" />
+    <Image
+      src={src}
+      width="500px"
+      height="500px"
+      objectFit="cover"
+      placeholder="blur"
+    />
     <Text>{text}</Text>
   </Box>
 );
