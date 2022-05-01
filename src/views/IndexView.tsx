@@ -1,6 +1,7 @@
 import { Box, Grid, Heading, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { useState } from "react";
+import indexImage from "../../public/1e9fa1f6-faf7-4b87-a4c8-df46a6497313.jpg";
 
 export function IndexView() {
   const [loaded, setLoaded] = useState(false);
@@ -15,7 +16,7 @@ export function IndexView() {
     >
       <Grid columnGap={16} templateColumns={{ base: "1fr", lg: "1fr 1fr" }}>
         <Image
-          src="/1e9fa1f6-faf7-4b87-a4c8-df46a6497313.jpg"
+          src={indexImage}
           width="500px"
           height="500px"
           objectFit="cover"
