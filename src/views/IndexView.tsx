@@ -1,7 +1,9 @@
 import { Box, Grid, Heading, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { useState } from "react";
 
 export function IndexView() {
+  const [loaded, setLoaded] = useState(false);
   return (
     <Box
       paddingX={{ base: 4, lg: 0 }}
@@ -17,7 +19,24 @@ export function IndexView() {
           width="500px"
           height="500px"
           objectFit="cover"
+          placeholder="blur"
+          className={loaded ? "unblur" : ""}
+          onLoadingComplete={() => setLoaded(true)}
         />
+        <style jsx global>{`
+          .unblur {
+            animation: unblur 1s linear;
+          }
+
+          @keyframes unblur {
+            from {
+              filter: blur(20px);
+            }
+            to {
+              filter: blur(0);
+            }
+          }
+        `}</style>
 
         <Flex
           paddingRight={8}
