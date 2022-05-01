@@ -1,10 +1,11 @@
-import { Box, Grid, Heading, Flex, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import { useState } from "react";
+
 import indexImage from "../../public/1e9fa1f6-faf7-4b87-a4c8-df46a6497313.jpg";
 
+import { LazyImage } from "../components/LazyImage";
+
 export function IndexView() {
-  const [loaded, setLoaded] = useState(false);
   return (
     <Box
       paddingX={{ base: 4, lg: 0 }}
@@ -15,29 +16,7 @@ export function IndexView() {
       marginX="auto"
     >
       <Grid columnGap={16} templateColumns={{ base: "1fr", lg: "1fr 1fr" }}>
-        <Image
-          src={indexImage}
-          width="500px"
-          height="500px"
-          objectFit="cover"
-          placeholder="blur"
-          className={loaded ? "unblur" : ""}
-          onLoadingComplete={() => setLoaded(true)}
-        />
-        <style jsx global>{`
-          .unblur {
-            animation: unblur 0.5s linear;
-          }
-
-          @keyframes unblur {
-            from {
-              filter: blur(20px);
-            }
-            to {
-              filter: blur(0);
-            }
-          }
-        `}</style>
+        <LazyImage src={indexImage} alt="A photo of Ania in Warrior 2 pose" />
 
         <Flex
           paddingRight={8}
