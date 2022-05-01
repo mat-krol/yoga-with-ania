@@ -85,7 +85,7 @@ export function AboutView() {
         </Heading>
         <Grid
           templateColumns={{ base: "1fr 1fr", lg: "1fr 1fr 1fr 1fr" }}
-          columnGap="2px"
+          columnGap="16px"
           rowGap={4}
         >
           <Card
