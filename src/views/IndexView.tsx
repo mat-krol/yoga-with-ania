@@ -24,9 +24,9 @@ export function IndexView() {
           className={loaded ? "unblur" : ""}
           onLoadingComplete={() => setLoaded(true)}
         />
-        {/* <style jsx global>{`
+        <style jsx global>{`
           .unblur {
-            animation: unblur 1s linear;
+            animation: unblur 0.5s linear;
           }
 
           @keyframes unblur {
@@ -37,7 +37,7 @@ export function IndexView() {
               filter: blur(0);
             }
           }
-        `}</style> */}
+        `}</style>
 
         <Flex
           paddingRight={8}
