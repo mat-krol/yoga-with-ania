@@ -89,7 +89,7 @@ export function AboutView() {
         marginX="auto"
         spacing={{ base: 4, lg: 8 }}
       >
-        <Heading as="h2" size="2xl">
+        <Heading as="h2" size="3xl">
           My areas of interest
         </Heading>
         <Grid

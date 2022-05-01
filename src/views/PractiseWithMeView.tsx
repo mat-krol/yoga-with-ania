@@ -17,7 +17,7 @@ export function PractiseWithMeView() {
       marginX="auto"
       spacing={{ base: 4, lg: 8 }}
     >
-      <Heading as="h1" size="4xl">
+      <Heading as="h1" size="3xl">
         Practise with me
       </Heading>
       <Grid
