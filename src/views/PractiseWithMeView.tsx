@@ -5,6 +5,9 @@ import {
 } from "../common/links";
 import { TextImageCard } from "../components/TextImageCard";
 
+import scheduleImage from "../../public/1e786a31-d84f-4a9d-8018-ba8d783c2aca.jpg";
+import corporateImage from "../../public/ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg";
+
 export function PractiseWithMeView() {
   return (
     <Stack
@@ -25,7 +28,7 @@ export function PractiseWithMeView() {
         <a href={linkToCurrentSchedule()}>
           <TextImageCard
             isHoverable
-            src="/1e786a31-d84f-4a9d-8018-ba8d783c2aca.jpg"
+            src={scheduleImage}
             text="Current Schedule"
           />
         </a>
@@ -33,7 +36,7 @@ export function PractiseWithMeView() {
         <a href={linkToPrivatesAndCorporate()}>
           <TextImageCard
             isHoverable
-            src="/ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg"
+            src={corporateImage}
             text="Privates & Corporate"
           />
         </a>
