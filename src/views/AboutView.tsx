@@ -1,5 +1,4 @@
 import { Box, Grid, Heading, Stack, Text } from "@chakra-ui/react";
-import Image from "next/image";
 
 import aboutImage from "../../public/b965ad6f-80d5-47b4-b8f3-0b3b270f8f12.jpg";
 import vinyasaImage from "../../public/1e786a31-d84f-4a9d-8018-ba8d783c2aca.jpg";
@@ -8,6 +7,7 @@ import meditationImage from "../../public/c417a8c5-007d-410a-8ed1-04f6b2b4e898.j
 import pranayamaImage from "../../public/53dfeb3e-db1e-469f-b4ad-bab54ac5e7c9.jpg";
 
 import { TextImageCard } from "../components/TextImageCard";
+import { LazyImage } from "../components/LazyImage";
 
 export function AboutView() {
   return (
@@ -21,12 +21,9 @@ export function AboutView() {
         marginX="auto"
       >
         <Grid columnGap={16} templateColumns={{ base: "1fr", lg: "1fr 1fr" }}>
-          <Image
+          <LazyImage
             src={aboutImage}
-            width="500px"
-            height="500px"
-            objectFit="cover"
-            placeholder="blur"
+            alt="A photo of Ania looking into the space while smiling. She is sat on a grass green yoga mat and wearing a pink/burgundy yoga outfit."
           />
 
           <Stack
