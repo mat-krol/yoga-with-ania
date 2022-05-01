@@ -13,7 +13,7 @@ export function Header({ children }: PropsWithChildren<{}>) {
       maxW="960px"
       marginX="auto"
     >
-      <Stack direction="row">
+      <Stack direction="row" cursor="pointer">
         <Link href={linkToIndex()}>
           <Heading as="h1" size="2xl">
             Yoga with Ania
