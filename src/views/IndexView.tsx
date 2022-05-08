@@ -45,9 +45,9 @@ export function IndexView() {
               limits of your practice and take small steps outside of your
               comfort zone.
             </Text>
-            <NextLink href={linkToAbout()}>
+            {/* <NextLink href={linkToAbout()}>
               <Link>Read more</Link>
-            </NextLink>
+            </NextLink> */}
           </Flex>
         </Grid>
         <Box
