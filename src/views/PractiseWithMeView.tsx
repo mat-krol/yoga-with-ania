@@ -1,11 +1,9 @@
-import { Grid, Heading, Stack } from "@chakra-ui/react";
-
-import scheduleImage from "../../public/1e786a31-d84f-4a9d-8018-ba8d783c2aca.jpg";
-import corporateImage from "../../public/ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg";
+import { Box, Grid, Heading, Stack } from "@chakra-ui/react";
 
 import {
   linkToCurrentSchedule, linkToPrivatesAndCorporate
 } from "../common/links";
+import { EmptyTextImageCard } from "../components/EmptyTextImageCard";
 import { TextImageCard } from "../components/TextImageCard";
 
 export function PractiseWithMeView() {
@@ -17,7 +15,7 @@ export function PractiseWithMeView() {
       marginX="auto"
       spacing={{ base: 4, lg: 8 }}
     >
-      <Heading as="h1" size="3xl">
+      <Heading as="h1" size="3xl" textAlign="center">
         Practise with me
       </Heading>
       <Grid
@@ -25,6 +23,8 @@ export function PractiseWithMeView() {
         columnGap="16px"
         rowGap={4}
       >
+        <EmptyTextImageCard />
+
         <a href={linkToCurrentSchedule()}>
           <TextImageCard
             isHoverable
@@ -42,6 +42,8 @@ export function PractiseWithMeView() {
             alt="A close up of Ania's arms and legs while she's doing the pigeon pose"
           />
         </a>
+
+        <EmptyTextImageCard />
       </Grid>
     </Stack>
   );
