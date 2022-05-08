@@ -1,11 +1,5 @@
 import { Box, Grid, Heading, Stack, Text } from "@chakra-ui/react";
 
-import vinyasaImage from "../../public/1e786a31-d84f-4a9d-8018-ba8d783c2aca.jpg";
-import pranayamaImage from "../../public/53dfeb3e-db1e-469f-b4ad-bab54ac5e7c9.jpg";
-import aboutImage from "../../public/b965ad6f-80d5-47b4-b8f3-0b3b270f8f12.jpg";
-import meditationImage from "../../public/c417a8c5-007d-410a-8ed1-04f6b2b4e898.jpg";
-import skillsImage from "../../public/ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg";
-
 import { LazyImage } from "../components/LazyImage";
 import { TextImageCard } from "../components/TextImageCard";
 
@@ -22,7 +16,7 @@ export function AboutView() {
       >
         <Grid columnGap={16} templateColumns={{ base: "1fr", lg: "1fr 1fr" }}>
           <LazyImage
-            src={aboutImage}
+            src="b965ad6f-80d5-47b4-b8f3-0b3b270f8f12.jpg"
             alt="A photo of Ania looking into the space while smiling. She is sat on a grass green yoga mat and wearing a pink/burgundy yoga outfit."
           />
 
@@ -95,22 +89,22 @@ export function AboutView() {
           rowGap={4}
         >
           <TextImageCard
-            src={vinyasaImage}
+            src="1e786a31-d84f-4a9d-8018-ba8d783c2aca.jpg"
             text="Vinyasa & Mandala"
             alt="A photo of Ania practising yoga"
           />
           <TextImageCard
-            src={skillsImage}
+            src="ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg"
             text="Skills (e.g. arm balances, inversions)"
             alt="A close up of Ania's arms and legs while she's doing the pigeon pose"
           />
           <TextImageCard
-            src={meditationImage}
+            src="c417a8c5-007d-410a-8ed1-04f6b2b4e898.jpg"
             text="Yin Yoga & Meditation"
             alt="A photo of Ania practising yoga"
           />
           <TextImageCard
-            src={pranayamaImage}
+            src="53dfeb3e-db1e-469f-b4ad-bab54ac5e7c9.jpg"
             text="Pranayama and the science of breath"
             alt="A close up of Ania while she's practising breathing in savasana"
           />

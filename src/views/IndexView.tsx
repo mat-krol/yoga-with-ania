@@ -22,7 +22,10 @@ export function IndexView() {
         marginX="auto"
       >
         <Grid columnGap={16} templateColumns={{ base: "1fr", lg: "1fr 1fr" }}>
-          <LazyImage src={indexImage} alt="A photo of Ania in Warrior 2 pose" />
+          <LazyImage
+            src="bfd293c0-48d2-4fdc-9243-34ccb0454305.jpg"
+            alt="A photo of Ania in Warrior 2 pose"
+          />
 
           <Flex
             paddingRight={8}

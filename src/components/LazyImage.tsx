@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Props = {
   alt: string;
@@ -8,12 +8,23 @@ type Props = {
 
 export function LazyImage({ alt, src }: Props) {
   const [loaded, setLoaded] = useState(false);
+  const [image, setImage] = useState<StaticImageData>();
+
+  useEffect(() => {
+    (async () => {
+      const image = (await import(`../../public/images/${src}`)).default;
+
+      setImage(image);
+    })();
+  }, []);
+
+  if (!image) return null;
 
   return (
     <>
       <Image
         alt={alt}
-        src={src}
+        src={image}
         width="500px"
         height="500px"
         objectFit="cover"

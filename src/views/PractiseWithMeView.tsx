@@ -28,7 +28,7 @@ export function PractiseWithMeView() {
         <a href={linkToCurrentSchedule()}>
           <TextImageCard
             isHoverable
-            src={scheduleImage}
+            src="1e786a31-d84f-4a9d-8018-ba8d783c2aca.jpg"
             text="Current Schedule"
             alt="A photo of Ania practising yoga"
           />
@@ -37,7 +37,7 @@ export function PractiseWithMeView() {
         <a href={linkToPrivatesAndCorporate()}>
           <TextImageCard
             isHoverable
-            src={corporateImage}
+            src="ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg"
             text="Privates & Corporate"
             alt="A close up of Ania's arms and legs while she's doing the pigeon pose"
           />

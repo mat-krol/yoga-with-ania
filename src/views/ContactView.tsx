@@ -1,19 +1,9 @@
 import {
-  Box,
-  Alert,
-  AlertIcon,
-  Button,
-  FormControl,
-  FormLabel,
-  Input,
-  Stack,
-  Grid,
-  Heading,
-  Textarea,
+  Alert, AlertIcon, Box, Button, FormControl, FormLabel, Grid, Heading, Input,
+  Stack, Textarea
 } from "@chakra-ui/react";
 import { useState } from "react";
 
-import contactImage from "../../public/b9b897ab-f67c-4294-8974-77fb8bfd09ef.jpg";
 import { LazyImage } from "../components/LazyImage";
 
 export function ContactView() {
@@ -98,7 +88,7 @@ export function ContactView() {
           </Button>
         </Stack>
         <LazyImage
-          src={contactImage}
+          src="b9b897ab-f67c-4294-8974-77fb8bfd09ef.jpg"
           alt="A photo of Ania smiling and hugging her dog Shiver"
         />
       </Grid>
