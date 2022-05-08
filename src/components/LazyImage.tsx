@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 
@@ -16,9 +17,9 @@ export function LazyImage({ alt, src }: Props) {
 
       setImage(image);
     })();
-  }, []);
+  }, [src]);
 
-  if (!image) return null;
+  if (!image) return <Box width="100%" paddingTop="100%" />;
 
   return (
     <>
