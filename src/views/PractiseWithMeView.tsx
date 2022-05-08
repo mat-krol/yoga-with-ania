@@ -1,10 +1,9 @@
-import { Box, Grid, Heading, Stack } from "@chakra-ui/react";
+import { Grid, Heading, Stack } from "@chakra-ui/react";
 
 import {
   linkToCurrentSchedule, linkToOnDemand, linkToPrivatesAndCorporate,
   linkToWorkshops
 } from "../common/links";
-import { EmptyTextImageCard } from "../components/EmptyTextImageCard";
 import { TextImageCard } from "../components/TextImageCard";
 
 export function PractiseWithMeView() {
