@@ -72,7 +72,7 @@ export function IndexView() {
         marginX="auto"
       >
         <Stack spacing={8}>
-          <Heading as="h2" size="3xl" textAlign="center">
+          <Heading as="h2" size="3xl">
             Testimonials
           </Heading>
           <Grid

@@ -1,14 +1,14 @@
 import { Footer } from "../src/components/Footer";
 import { HeaderWithNavigation } from "../src/components/HeaderWithNavigation";
 import { Layout } from "../src/components/Layout";
-import { ContactView } from "../src/views/ContactView";
+import { ComingSoonView } from "../src/views/ComingSoonView";
 
-export default function ContactPage() {
+export default function WorkshopsPage() {
   return (
-    <Layout title="Contact">
+    <Layout title="Workshops">
       {{
         header: <HeaderWithNavigation />,
-        body: <ContactView />,
+        body: <ComingSoonView />,
         footer: <Footer />,
       }}
     </Layout>

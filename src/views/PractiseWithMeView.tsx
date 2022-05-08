@@ -1,7 +1,8 @@
 import { Box, Grid, Heading, Stack } from "@chakra-ui/react";
 
 import {
-  linkToCurrentSchedule, linkToPrivatesAndCorporate
+  linkToCurrentSchedule, linkToOnDemand, linkToPrivatesAndCorporate,
+  linkToWorkshops
 } from "../common/links";
 import { EmptyTextImageCard } from "../components/EmptyTextImageCard";
 import { TextImageCard } from "../components/TextImageCard";
@@ -15,7 +16,7 @@ export function PractiseWithMeView() {
       marginX="auto"
       spacing={{ base: 4, lg: 8 }}
     >
-      <Heading as="h1" size="3xl" textAlign="center">
+      <Heading as="h1" size="3xl">
         Practise with me
       </Heading>
       <Grid
@@ -23,12 +24,10 @@ export function PractiseWithMeView() {
         columnGap="16px"
         rowGap={4}
       >
-        <EmptyTextImageCard />
-
         <a href={linkToCurrentSchedule()}>
           <TextImageCard
             isHoverable
-            src="1e786a31-d84f-4a9d-8018-ba8d783c2aca.jpg"
+            src="bfd293c0-48d2-4fdc-9243-34ccb0454305.jpg"
             text="Current Schedule"
             alt="A photo of Ania practising yoga"
           />
@@ -37,13 +36,29 @@ export function PractiseWithMeView() {
         <a href={linkToPrivatesAndCorporate()}>
           <TextImageCard
             isHoverable
-            src="ceb5100b-5b74-4fc5-a2a8-bd65312ad33c.jpg"
+            src="37f57adb-496e-4250-b321-404f54b715ee.jpg"
             text="Privates & Corporate"
             alt="A close up of Ania's arms and legs while she's doing the pigeon pose"
           />
         </a>
 
-        <EmptyTextImageCard />
+        <a href={linkToOnDemand()}>
+          <TextImageCard
+            isHoverable
+            src="f37898ef-02e8-4dca-8cfb-fccd91962ba2.jpg"
+            text="On Demand"
+            alt="A photo of Ania practising yoga"
+          />
+        </a>
+
+        <a href={linkToWorkshops()}>
+          <TextImageCard
+            src="57972385-4e82-4618-8f6a-2f28dbc7e5c0.jpg"
+            isHoverable
+            text="Workshops"
+            alt="A photo of Ania practising yoga"
+          />
+        </a>
       </Grid>
     </Stack>
   );
