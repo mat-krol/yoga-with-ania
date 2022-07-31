@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+  squash_merges: true
+media_folder: public/pliki
+public_folder: /pliki
+local_backend: true
+logo_url: https://www.uwc.org.pl/grafika/uwc.png
+collections:
+  - name: "pages"
+    label: "Page"
+    folder: "content/pages/"
+    extension: "md"
+    format: "frontmatter"
+    create: true
+    slug: "{{parentId}}_{{pageId}}"
+    sortable_fields: ["order"]
+    summary: "{{parentId}} → {{pageId}}"
+    view_groups:
+      - label: Parent ID -
+        field: parentId
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Parent ID"
+        name: "parentId"
+        widget: "relation"
+        collection: "pages"
+        value_field: "{{slug}}"
+        search_fields: ["title"]
+        required: false
+      - label: "Order"
+        name: "order"
+        widget: "number"
+        required: false
+        value_type: "int"
+        step: 1
+      - label: "Description"
+        name: "description"
+        widget: "string"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: false
