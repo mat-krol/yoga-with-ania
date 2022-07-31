@@ -1,9 +1,10 @@
 export const config = {
   cms_manual_init: true,
   backend: {
-    name: "github",
     repo: "mat-krol/yoga-with-ania",
+    name: "git-gateway",
     branch: "main",
+    squash_merges: true,
   },
   local_backend: true,
   media_folder: "public/img",
