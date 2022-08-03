@@ -1,15 +1,9 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-export default function getPages() {
-  return fs.readdirSync("content/pages").map((fileName) => {
-    const { data } = matter(
-      fs.readFileSync("content/pages/" + fileName, "utf8")
-    );
-    const pageId = data.pageId || fileName.split("_").reverse()[0].slice(0, -3);
-    const parentId = data.parentId
-      ? data.parentId.split("_").reverse()[0]
-      : null;
-    return { ...data, pageId, parentId };
+export function getPages(path: string = "cms/content/pages") {
+  return fs.readdirSync(path).map((fileName) => {
+    const { data } = matter(fs.readFileSync(path + "/" + fileName, "utf8"));
+    return { ...data, date: data.date.toString() };
   });
 }
