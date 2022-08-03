@@ -1,5 +1,4 @@
-import { Box, Button, Grid, Heading, Stack, Text } from "@chakra-ui/react";
-import moment from "moment";
+import { Box, Grid, Heading, Stack, Text } from "@chakra-ui/react";
 
 import { LazyImage } from "../../components/LazyImage";
 
@@ -12,12 +11,7 @@ type Props = {
 };
 
 export function CurrentScheduleView({ sessions, weekNos }: Props) {
-  const monday = moment().startOf("isoWeek");
-  const sunday = moment().endOf("isoWeek");
-
   const [currentWeekNo, ...futureWeekNos] = weekNos;
-
-  console.log(currentWeekNo, futureWeekNos, weekNos);
 
   return (
     <>
@@ -73,6 +67,7 @@ export function CurrentScheduleView({ sessions, weekNos }: Props) {
         position="relative"
         maxW="960px"
         marginX="auto"
+        id="this-week"
       >
         <Stack spacing={8}>
           <Heading as="h3" size="2xl">
@@ -95,6 +90,7 @@ export function CurrentScheduleView({ sessions, weekNos }: Props) {
         position="relative"
         maxW="960px"
         marginX="auto"
+        id="future-weeks"
       >
         <Stack spacing={8}>
           <Heading as="h3" size="2xl">
