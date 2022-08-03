@@ -16,10 +16,4 @@ const AdminPage: React.FC = () => {
   return <CMS />;
 };
 
-// export function getStaticProps() {
-//   return {
-//     notFound: process.env.NODE_ENV === "production",
-//   };
-// }
-
 export default AdminPage;

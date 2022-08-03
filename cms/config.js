@@ -7,8 +7,9 @@ export const config = {
     squash_merges: true,
   },
   local_backend: true,
-  media_folder: "public/img",
-  public_folder: "img",
+  logo_url: "",
+  media_folder: "public/images",
+  public_folder: "images",
   collections: [
     {
       name: "pages",
@@ -31,6 +32,20 @@ export const config = {
             },
           ],
         },
+      ],
+    },
+    {
+      name: "sessions",
+      label: "Current Schedule",
+      folder: "cms/sessions",
+      summary:
+        "{{year}}/{{month}}/{{day}} - {{hour}}:{{minute}} - {{title}} @ {{location}}",
+      create: true,
+      fields: [
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Date", name: "date", widget: "datetime" },
+        { label: "Location", name: "location", widget: "string" },
+        { label: "Link", name: "link", widget: "string" },
       ],
     },
   ],
